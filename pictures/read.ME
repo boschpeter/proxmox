@@ -1,0 +1,138 @@
+# proxmox_works_on_azure
+
+https://www.reddit.com/r/Proxmox/comments/cp2xrp/proxmox_works_on_azure/
+
+# install azure cli
+````invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet' ````
+
+# azure login
+
+````
+boscp08@boscp08-dingo:~$ az login bosch.peter@outlook.com  0l..n
+You have logged in. Now let us find all the subscriptions to which you have access...
+[
+  {
+    "cloudName": "AzureCloud",
+    "id": "cfcb03ea-255b-42f8-beca-2d4ac30779bb",
+    "isDefault": true,
+    "name": "Azure-abonnement 1",
+    "state": "Enabled",
+    "tenantId": "62123322-502d-493f-b543-503672043240",
+    "user": {
+      "name": "bosch.peter@outlook.com",
+      "type": "user"
+    }
+  }
+]
+
+````
+
+# delete resource group (optional)
+
+````az group delete --name SocialcoinCityGroup ````
+
+# create resourcegroup
+
+````az group create --name SocialcoinCityGroup --location westeurope````
+
+
+````
+PS C:\Users\bosch> az group create --name SocialcoinCityGroup --location westeurope
+{
+  "id": "/subscriptions/cfcb03ea-255b-42f8-beca-2d4ac30779bb/resourceGroups/SocialcoinCityGroup",
+  "location": "westeurope",
+  "managedBy": null,
+  "name": "SocialcoinCityGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+````
+
+
+ az vm open-port --port 80 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM
+    
+    az vm open-port --port 443 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM \
+    --priority 1010
+
+
+az vm open-port --port 8006 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM \
+    --priority 1030
+
+
+
+
+
+
+az vm create
+--resource-group SocialcoinCityGroup
+--name waardepapierenVM
+--image UbuntuLTS
+--admin-username ezahr
+--admin-password Di..._Wi...it
+--generate-ssh-keys
+--custom-data cloud-init.txt
+
+
+
+
+
+
+````
+
+az vm create \
+--resource-group SocialcoinCityGroup \
+--name socialcoinVM \
+--image Debian \
+--admin-username boscp08 \
+--admin-password Discicpl_Discicpl \
+--generate-ssh-keys 
+
+````
+
+````
+boscp08@ubuntu:~$ az vm create \
+> --resource-group SocialcoinCityGroup \
+> --name socialcoinVM \
+> --image Debian \
+> --admin-username boscp08 \
+> --admin-password Di_Di \
+> --generate-ssh-keys \
+> --custom-data cloud-init.txt \
+> 
+{
+  "fqdns": "",
+  "id": "/subscriptions/cfcb03ea-255b-42f8-beca-2d4ac30779bb/resourceGroups/SocialcoinCityGroup/providers/Microsoft.Compute/virtualMachines/socialcoinVM",
+  "location": "westeurope",
+  "macAddress": "00-0D-3A-AD-1B-B5",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.4",
+  "publicIpAddress": "52.136.227.135",
+  "resourceGroup": "SocialcoinCityGroup",
+  "zones": ""
+}
+
+````
+ az vm open-port --port 80 \
+    --resource-group SocialcoinCityGroup \
+    --name socialcoinVM
+    
+    az vm open-port --port 443 \
+    --resource-group SocialcoinCityGroup \
+    --name socialcoinVM \
+    --priority 1010
+
+    az vm open-port --port 8006 \
+    --resource-group SocialcoinCityGroup \
+    --name socialcoinVM \
+    --priority 1020
+````
+
