@@ -14,27 +14,38 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 ## create azure debian virtual machine
 ``` az login ````  bosch.peter@outlook.com 0l
 
-```` az group delete --name SocialcoinCityGroup ````
+```` az group delete --name SocialcoinProxmoxGroup ````
 
-```` az vm create --resource-group SocialcoinCityGroup --name socialcoinVM ````
+```` az vm create --resource-group SocialcoinProxmoxGroup --name socialcoinVM ````
 
-```` az group create --name SocialcoinCityGroup --location westeurope````
+```` az group create --name SocialcoinProxmoxGroup --location westeurope````
 
 ```` touch cloud-init.txt````
 
-````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys 
+````az vm create   --resource-group SocialcoinProxmoxGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys 
 ````
 
 ### pretty
 ````
 az vm create
---resource-group SocialcoinCityGroup
+--resource-group SocialcoinProxmoxGroup
 --name DebianBuser
 --image Debian
 --admin-username boscp08
 --admin-password Di..Di
 --custom-data cloud-init.txt
 --generate-ssh-keys
+````
+
+`````
+az vm create
+--resource-group Discipl_Wigo4it_DockerGroup \
+--name waardepapierenVM \
+--image UbuntuLTS \
+--admin-username ezahr \
+--admin-password Di..._Wi...it \
+--generate-ssh-keys \
+--custom-data cloud-init.txt
 ````
 
 Discipl_Discpl
