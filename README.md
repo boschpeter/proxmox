@@ -39,24 +39,24 @@ az vm create
 
 ### open sesame
 
-
-```` az vm open-port --port 80 \
-    --resource-group SocialcoinCityGroup \
-    --name waardepapierenVM
+````
+az vm open-port --port 80 \
+   --resource-group SocialcoinCityGroup \
+   --name waardepapierenVM
 ````
 
 ````
-    az vm open-port --port 443 \
-    --resource-group SocialcoinCityGroup \
-    --name waardepapierenVM \
-    --priority 1010
+az vm open-port --port 443 \
+  --resource-group SocialcoinCityGroup \
+  --name waardepapierenVM \
+  --priority 1010
 ````
 
 ````
 az vm open-port --port 8006 \
-    --resource-group SocialcoinCityGroup \
-    --name waardepapierenVM \
-    --priority 1030
+   --resource-group SocialcoinCityGroup \
+   --name waardepapierenVM \
+   --priority 1030
 ````
 
 # FQDN
