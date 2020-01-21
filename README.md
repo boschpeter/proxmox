@@ -90,4 +90,6 @@ i fired up a D4s_v3 (4vCPU, 16GB RAM, 32GB SSD) + an additional 512GB SSD with a
 After connecting via SSH [I followed the instructions at Install_Proxmox_VE_on_Debian_Buster](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_Buster)
 
 
+![ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.](https://github.com/boschpeter/proxmox/blob/master/pictures/ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.png)
+
 [goto_wiki->](https://github.com/boschpeter/proxmox/wiki/Install_Proxmox_VE_on_Debian_Buster)
