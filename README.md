@@ -109,7 +109,7 @@ After connecting via SSH [I followed the instructions at Install_Proxmox_VE_on_D
 
 ![ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.](https://github.com/boschpeter/proxmox/blob/master/pictures/ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.png)
 
-[goto_wiki->](https://github.com/boschpeter/proxmox/wiki/Install_Proxmox_VE_on_Debian_Buster-40.115.17.145-socialcoin-pve.westeurope.cloudapp.azure.com:8006)
+[goto_wiki->](https://github.com/boschpeter/proxmox/wiki/Install_Proxmox_VE_on_Debian_Buster)
 
 
 
