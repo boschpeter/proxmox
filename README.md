@@ -20,4 +20,8 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 
 ```` touch cloud-init.txt````
 
-````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Discicpl_Discicpl   --custom-data cloud-init.txt   --generate-ssh-keys````
+````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys````
+
+# FQDN
+
+{FQDN}(https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)
