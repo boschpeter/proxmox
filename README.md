@@ -37,7 +37,7 @@ az vm create
 --generate-ssh-keys
 ````
 
-
+Discipl_Discpl
 ### open sesame
 
 ````
@@ -59,6 +59,23 @@ az vm open-port --port 8006 \
    --name socialcoinVM \
    --priority 1030
 ````
+
+````
+boscp08@boscp08-dingo:~$ ssh boscp08@40.115.17.145
+Password: Di_Di
+Linux socialcoinVM 4.19.0-6-cloud-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+````
+
+	````ssh-copy-id -i ~/.ssh/id_rsa.pub boscp08@40.115.17.145````
+   
+   
 
 # FQDN
 When you create a virtual machine (VM) in the Azure portal, a public IP resource for the virtual machine is automatically created. You use this IP address to remotely access the VM. Although the portal does not create a fully qualified domain name, or FQDN, you can add one once the VM is created. This article demonstrates the steps to create a DNS name or FQDN.
