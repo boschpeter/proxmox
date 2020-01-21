@@ -24,4 +24,4 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 
 # FQDN
 
-{FQDN}(https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)
+[FQDN](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)
