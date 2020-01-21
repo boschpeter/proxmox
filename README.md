@@ -60,20 +60,20 @@ Discipl_Discpl
 ````
 az vm open-port --port 80 \
    --resource-group SocialcoinProxmoxGroup \
-   --name  socialcoinVM
+   --name  Socialcoin_proxmox
 ````
 
 ````
 az vm open-port --port 443 \
   --resource-group SocialcoinProxmoxGroup \
-  --name  socialcoinVM \
+  --name  Socialcoin_proxmox \
   --priority 1010
 ````
 
 ````
 az vm open-port --port 8006 \
    --resource-group SocialcoinProxmoxGroup \
-   --name socialcoinVM \
+   --name Socialcoin_proxmox \
    --priority 1030
 ````
 
