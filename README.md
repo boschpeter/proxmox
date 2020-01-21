@@ -3,7 +3,7 @@
 Proxmox VE is a complete open-source platform for enterprise virtualization. With the built-in web interface you can easily manage VMs and containers, software-defined storage and networking, high-availability clustering, and multiple out-of-the-box tools on a single solution.
 
 
-# Proxmox experiment  theo theunissen 
+# Proxmox experiment  theo theunissen Discipl_Discipl
 
 Download the proxmox VE ISO-image vanaf https://www.proxmox.com/en/downloads/category/iso-images-pve 
 en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure… Discipl_Discipl)
@@ -22,12 +22,12 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure… Discipl_Discip
 
 ```` touch cloud-init.txt````
 
-````az vm create   --resource-group SocialcoinProxmoxGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys 
+````az vm create   --resource-group SocialcoinProxmoxGroup    --name  Socialcoin_proxmox   --image Debian   --admin-username boscp08   --admin-password D_D   --custom-data cloud-init.txt   --generate-ssh-keys 
 ````
 
 
 ````
-az vm create   --resource-group SocialcoinProxmoxGroup    --name  UbuntuLTS   --image UbuntuLTS   --admin-username boscp08   --admin-password Disicpl_Discipl   --custom-data cloud-init.txt   --generate-ssh-keys 
+az vm create   --resource-group SocialcoinProxmoxGroup    --name  UbuntuLTS   --image UbuntuLTS   --admin-username boscp08   --admin-password D_D   --custom-data cloud-init.txt   --generate-ssh-keys 
 ````
 
 ### pretty  
@@ -127,4 +127,20 @@ boscp08@boscp08-dingo:~$ az vm create   --resource-group SocialcoinProxmoxGroup 
 }
 
 socialcoin-proxmox.westeurope.cloudapp.azure.com
+
+
+Connection to socialcoin-proxmox.westeurope.cloudapp.azure.com closed.
+boscp08@boscp08-dingo:~$ az vm create   --resource-group SocialcoinProxmoxGroup    --name  Socialcoin_proxmox   --image Debian   --admin-username boscp08   --admin-password Di_DI   --custom-data cloud-init.txt   --generate-ssh-keys 
+{
+  "fqdns": "",
+  "id": "/subscriptions/cfcb03ea-255b-42f8-beca-2d4ac30779bb/resourceGroups/SocialcoinProxmoxGroup/providers/Microsoft.Compute/virtualMachines/Socialcoin_proxmox",
+  "location": "westeurope",
+  "macAddress": "00-0D-3A-AC-A5-8C",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.6",
+  "publicIpAddress": "40.114.254.99",
+  "resourceGroup": "SocialcoinProxmoxGroup",
+  "zones": ""
+}
+
 
