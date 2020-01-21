@@ -8,7 +8,7 @@ Proxmox experiment
 Download the proxmox VE ISO-image vanaf https://www.proxmox.com/en/downloads/category/iso-images-pve 
 en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 
-
+[az create vm docs](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest)
 
 ``` az login ````  bosch.peter@outlook.com 0l
 
