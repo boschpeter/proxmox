@@ -11,6 +11,7 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 [az create vm docs](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest)
 [azure-cli-latest#az-vm-create](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-create)
 
+## create azure debian virtual machine
 ``` az login ````  bosch.peter@outlook.com 0l
 
 ```` az group delete --name SocialcoinCityGroup ````
@@ -24,10 +25,23 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 ````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys````
 
 
+### open sesame
 
-80
-443
-8006
+ az vm open-port --port 80 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM
+    
+    az vm open-port --port 443 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM \
+    --priority 1010
+
+
+az vm open-port --port 8006 \
+    --resource-group SocialcoinCityGroup \
+    --name waardepapierenVM \
+    --priority 1030
+
 
 # FQDN
 When you create a virtual machine (VM) in the Azure portal, a public IP resource for the virtual machine is automatically created. You use this IP address to remotely access the VM. Although the portal does not create a fully qualified domain name, or FQDN, you can add one once the VM is created. This article demonstrates the steps to create a DNS name or FQDN.
