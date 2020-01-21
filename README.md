@@ -3,10 +3,10 @@
 Proxmox VE is a complete open-source platform for enterprise virtualization. With the built-in web interface you can easily manage VMs and containers, software-defined storage and networking, high-availability clustering, and multiple out-of-the-box tools on a single solution.
 
 
-# Proxmox experiment  theo theunissen
+# Proxmox experiment  theo theunissen 
 
 Download the proxmox VE ISO-image vanaf https://www.proxmox.com/en/downloads/category/iso-images-pve 
-en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
+en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure… Discipl_Discipl)
 
 [az create vm docs](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest)
 [azure-cli-latest#az-vm-create](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-create)
@@ -25,7 +25,14 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 ````az vm create   --resource-group SocialcoinProxmoxGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys 
 ````
 
-### pretty
+
+````az vm create   --resource-group SocialcoinProxmoxGroup    --name  UbuntuLTS   --image UbuntuLTS   --admin-username boscp08   --admin-password Disicpl_Discipl   --custom-data cloud-init.txt   --generate-ssh-keys 
+````
+
+
+
+
+### pretty  
 ````
 az vm create
 --resource-group SocialcoinProxmoxGroup
@@ -104,3 +111,18 @@ After connecting via SSH [I followed the instructions at Install_Proxmox_VE_on_D
 ![ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.](https://github.com/boschpeter/proxmox/blob/master/pictures/ssh_tunnel_socialcoin_Proxmox_Virtual_Environment.png)
 
 [goto_wiki->](https://github.com/boschpeter/proxmox/wiki/Install_Proxmox_VE_on_Debian_Buster-40.115.17.145-socialcoin-pve.westeurope.cloudapp.azure.com:8006)
+
+
+
+boscp08@boscp08-dingo:~$ az vm create   --resource-group SocialcoinProxmoxGroup    --name  UbuntuLTS   --image UbuntuLTS   --admin-username boscp08   --admin-password D_D   --custom-data cloud-init.txt   --generate-ssh-keys 
+{
+  "fqdns": "",
+  "id": "/subscriptions/cfcb03ea-255b-42f8-beca-2d4ac30779bb/resourceGroups/SocialcoinProxmoxGroup/providers/Microsoft.Compute/virtualMachines/UbuntuLTS",
+  "location": "westeurope",
+  "macAddress": "00-0D-3A-AE-66-01",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.5",
+  "publicIpAddress": "23.101.73.20",
+  "resourceGroup": "SocialcoinProxmoxGroup",
+  "zones": ""
+}
