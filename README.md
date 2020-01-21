@@ -11,9 +11,13 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 
 
 ``` az login ````  bosch.peter@outlook.com 0l
+
 ```` az group delete --name SocialcoinCityGroup ````
+
 ```` az vm create --resource-group SocialcoinCityGroup --name socialcoinVM ````
+
 ```` az group create --name SocialcoinCityGroup --location westeurope````
+
 ```` touch cloud-init.txt````
 
 ````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Discicpl_Discicpl   --custom-data cloud-init.txt   --generate-ssh-keys````
