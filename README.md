@@ -22,30 +22,52 @@ en installeer deze bij Azure. (Mogelijk werkt t niet bij Azure…)
 
 ```` touch cloud-init.txt````
 
-````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys````
+````az vm create   --resource-group SocialcoinCityGroup    --name  DebianBuster   --image Debian   --admin-username boscp08   --admin-password Di_Di   --custom-data cloud-init.txt   --generate-ssh-keys ```
+
+### pretty
+````
+az vm create
+--resource-group SocialcoinCityGroup
+--name DebianBuser
+--image Debian
+--admin-username boscp08
+--admin-password Di..Di
+--custom-data cloud-init.txt
+--generate-ssh-keys
+````
 
 
 ### open sesame
 
- az vm open-port --port 80 \
+```` az vm open-port --port 80 \
     --resource-group SocialcoinCityGroup \
     --name waardepapierenVM
-    
+````
+
+````
     az vm open-port --port 443 \
     --resource-group SocialcoinCityGroup \
     --name waardepapierenVM \
     --priority 1010
-
-
+````
+````
 az vm open-port --port 8006 \
     --resource-group SocialcoinCityGroup \
     --name waardepapierenVM \
     --priority 1030
-
+````
 
 # FQDN
 When you create a virtual machine (VM) in the Azure portal, a public IP resource for the virtual machine is automatically created. You use this IP address to remotely access the VM. Although the portal does not create a fully qualified domain name, or FQDN, you can add one once the VM is created. This article demonstrates the steps to create a DNS name or FQDN.
 
 [FQDN](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)
 Now that your VM has a public IP and DNS name, you can deploy common application frameworks or services such as nginx, MongoDB, Docker, proxmox? etc.
+
+
+[proxmox_works_on_azure](https://www.reddit.com/r/Proxmox/comments/cp2xrp/proxmox_works_on_azure/)
+
+i fired up a D4s_v3 (4vCPU, 16GB RAM, 32GB SSD) + an additional 512GB SSD with a default Debian Buster (non backport) image, configured an SSH key-pair and opened up all ports to my home IP (but probably just 22, 8006 and maybe 443 would suffice).
+After connecting via SSH I followed the instructions at https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_Buster
+
+
 
